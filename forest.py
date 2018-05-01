@@ -3,10 +3,10 @@ from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 from sklearn.cluster import KMeans
 
 from sklearn import datasets
-iris = datasets.load_iris()
-X = iris.data
+wine = datasets.load_wine()
+X = wine.data
 
-Z = linkage(X,'complete')
+Z = linkage(X,'average')
 
 plt.figure(figsize=(25, 10))
 dendrogram(Z)
